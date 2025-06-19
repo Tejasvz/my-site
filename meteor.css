@@ -1,0 +1,36 @@
+/* Meteor cracker animation */
+#meteor {
+  position: fixed;
+  top: -10vmin;
+  left: -10vmin;
+  width: 3vmin;
+  height: 20vmin;
+  background: linear-gradient(45deg, #fff, #ff0, #f00);
+  border-radius: 50% / 100%;
+  filter: drop-shadow(0 0 6px #ff0);
+  transform: rotate(45deg);
+  animation: meteor-move 2.5s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+  pointer-events: none;
+  z-index: 3000;
+  box-shadow:
+    0 0 8px 2px #fff,
+    0 0 15px 5px #ff0,
+    0 0 20px 10px #f00;
+}
+
+@keyframes meteor-move {
+  0% {
+    transform: translate(0, 0) rotate(45deg);
+    opacity: 1;
+    filter: drop-shadow(0 0 6px #ff0);
+  }
+  50% {
+    opacity: 0.8;
+    filter: drop-shadow(0 0 10px #ff0);
+  }
+  100% {
+    transform: translate(100vw, 100vh) rotate(180deg);
+    opacity: 0;
+    filter: drop-shadow(0 0 20px #ff0);
+  }
+}

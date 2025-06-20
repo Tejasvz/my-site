@@ -186,9 +186,9 @@ function startCountdownSequence() {
         console.log("Setting loadingText pointerEvents and visibility to none");
         loadingText.style.pointerEvents = 'none';
         loadingText.style.visibility = 'hidden';
-      }, 3000);
+      }, 4000);
     }
-  }, 3000);
+  }, 4000);
 
   setTimeout(() => {
     flowersEl.style.display = 'none';
